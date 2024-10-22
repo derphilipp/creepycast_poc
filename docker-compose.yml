@@ -1,0 +1,13 @@
+---
+services:
+  creepycast:
+    build: .
+    container_name: creepycast
+    networks:
+      - webservice
+    environment:
+      TZ: "Europe/Berlin"
+
+networks:
+  webservice:
+    external: true
